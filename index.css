@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    transition: 0.3s;
+}
+
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    margin: 10px 25px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .navbar ul li a {
+        font-size: 16px;
+        margin: 8px 12px;
+    }
+}
+
+#darkModeBtn {
+    padding: 10px 14px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+#darkModeBtn:hover {
+    opacity: 0.8;
+}
+
+.dark-mode #darkModeBtn {
+    background: #ddd;
+    color: black;
+}
+#gallery {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    cursor: pointer;
+    background: #000;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+@media (max-width: 500px) {
+    .gallery-item img {
+        height: 180px;
+    }
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+@media (max-width: 400px) {
+    #contact-form input,
+    #contact-form textarea {
+        max-width: 100%;
+    }
+}
